@@ -11,6 +11,7 @@ import Projects from '../components/Projects'
 import Certifications from '../components/Certifications'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import BackToTop from '../components/BackToTop'
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +44,7 @@ export default function Home() {
       <Certifications />
       <Contact />
       <Footer />
+      <BackToTop />
     </>
   )
 }

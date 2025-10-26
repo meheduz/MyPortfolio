@@ -7,29 +7,25 @@ export default function BlogPage() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    // Load from localStorage first
-    const localPosts = JSON.parse(localStorage.getItem('blogPosts') || '[]')
-    
-    if (localPosts.length > 0) {
-      setPosts(localPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()))
-    } else {
-      // Load default posts if no local posts
-      fetch('/posts.json')
-        .then(res => res.json())
-        .then(data => setPosts(data))
-        .catch(() => {
-          setPosts([
-            {
-              id: 1,
-              title: "My Journey into Computer Science",
-              date: "January 15, 2025",
-              excerpt: "Starting my CSE journey at SUST and discovering my passion for robotics and AI development.",
-              readTime: "3 min read",
-              category: "Personal"
-            }
-          ])
-        })
-    }
+    // Load posts from posts.json for public viewing
+    fetch('/posts.json')
+      .then(res => res.json())
+      .then(data => {
+        setPosts(data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()))
+      })
+      .catch(() => {
+        // Fallback to default posts
+        setPosts([
+          {
+            id: 1,
+            title: "My Journey into Computer Science",
+            date: "January 15, 2025",
+            excerpt: "Starting my CSE journey at SUST and discovering my passion for robotics and AI development.",
+            readTime: "3 min read",
+            category: "Personal"
+          }
+        ])
+      })
   }, [])
 
   return (

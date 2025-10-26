@@ -61,6 +61,11 @@ export default function AdminPage() {
       const updatedPosts = [post, ...savedPosts]
       localStorage.setItem('blogPosts', JSON.stringify(updatedPosts))
       
+      // Also save to posts.json for public viewing
+      const jsonContent = JSON.stringify(updatedPosts, null, 2)
+      console.log('Copy this to posts.json file:')
+      console.log(jsonContent)
+      
       // Submit to Netlify form for processing
       const formParams = new URLSearchParams()
       formParams.append('form-name', 'blog-posts')
@@ -77,10 +82,10 @@ export default function AdminPage() {
         setPosts(updatedPosts)
         localStorage.setItem('blogPosts', JSON.stringify(updatedPosts))
         setEditingPost(null)
-        alert('Post updated successfully!')
+        alert('Post updated successfully! Copy the JSON from console to posts.json')
       } else {
         setPosts([post, ...posts])
-        alert('Post published successfully!')
+        alert('Post published successfully! Copy the JSON from console to posts.json')
       }
       setNewPost({ title: '', content: '', category: 'Personal', excerpt: '' })
       

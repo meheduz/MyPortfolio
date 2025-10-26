@@ -7,14 +7,12 @@ export default function BlogPage() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    // Load posts from posts.json for public viewing
     fetch('/posts.json')
       .then(res => res.json())
       .then(data => {
         setPosts(data.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()))
       })
       .catch(() => {
-        // Fallback to default posts
         setPosts([
           {
             id: 1,
@@ -47,15 +45,20 @@ export default function BlogPage() {
 
           <div className="blog-posts">
             {posts.map((post) => (
-              <article key={post.id} className="blog-post">
-                <div className="post-meta">
-                  <span className="post-category">{post.category}</span>
-                  <span className="post-date">{post.date}</span>
+              <article key={post.id} className="blog-post fb-style">
+                <div className="post-header">
+                  <div className="author-info">
+                    <img src="/meheduz.png" alt="Meheduz" className="author-avatar" />
+                    <div>
+                      <h3 className="author-name">Md. Meheduz Zaman</h3>
+                      <p className="post-time">{post.date} • <span className="post-category">{post.category}</span></p>
+                    </div>
+                  </div>
                 </div>
-                <h2 className="post-title">{post.title}</h2>
-                <p className="post-excerpt">{post.excerpt}</p>
-                <div className="post-footer">
-                  <span className="read-time">{post.readTime}</span>
+                
+                <div className="post-content">
+                  <h2 className="post-title">{post.title}</h2>
+                  <p className="post-text">{post.content || post.excerpt}</p>
                 </div>
               </article>
             ))}

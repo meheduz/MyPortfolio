@@ -1644,3 +1644,104 @@ section {
         padding: 10px 15px;
     }
 }
+
+/* Facebook-like Blog Styles */
+.blog-post.fb-style {
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.post-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-dark);
+}
+
+.post-time {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.post-content {
+    padding: 1rem;
+}
+
+.post-content .post-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.post-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .blog-posts {
+        max-width: 100%;
+    }
+    
+    .blog-post.fb-style {
+        margin: 0 -1rem 1.5rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .post-header, .post-content {
+        padding: 0.75rem 1rem;
+    }
+    
+    .author-avatar {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .author-name {
+        font-size: 0.9rem;
+    }
+    
+    .post-time {
+        font-size: 0.75rem;
+    }
+    
+    .post-content .post-title {
+        font-size: 1rem;
+    }
+    
+    .post-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}

@@ -274,7 +274,41 @@ body {
     
     .btn:active,
     .contact-link:active {
-        transform: scale(0.98);
+        transform: scale(0.95);
+    }
+    
+    .skill-tag:active {
+        transform: scale(0.9);
+    }
+    
+    .project-link:active,
+    .edit-btn:active,
+    .delete-btn:active {
+        transform: scale(0.9);
+    }
+    
+    /* Larger touch targets */
+    .nav-menu a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hamburger {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btn {
+        min-height: 44px;
+    }
+    
+    .contact-link {
+        min-height: 44px;
     }
 }
 
@@ -1329,163 +1363,261 @@ section {
 /* Mobile phones */
 @media (max-width: 480px) {
     .container {
-        padding: 0 10px;
+        padding: 0 8px;
     }
     
     .nav-container {
-        padding: 0 15px;
-        height: 60px;
+        padding: 0 12px;
+        height: 55px;
     }
     
     .nav-logo {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .nav-menu {
-        top: 60px;
+        top: 55px;
+        padding: 15px 0;
+    }
+    
+    .nav-menu li {
+        margin: 8px 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+        display: block;
+    }
+    
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+    
+    .hamburger span {
+        width: 20px;
+        height: 2px;
     }
     
     .hero {
-        padding: 80px 0 40px;
-        min-height: 70vh;
+        padding: 70px 0 30px;
+        min-height: 65vh;
+    }
+    
+    .hero-content {
+        padding: 0 10px;
     }
     
     .hero-title {
-        font-size: 2rem;
-        line-height: 1.2;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        margin-bottom: 8px;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 15px;
     }
     
     .hero-description {
-        font-size: 0.95rem;
-        margin-bottom: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        padding: 0 5px;
     }
     
     .avatar-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    section {
-        padding: 50px 0;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-    
-    .about-content p {
-        font-size: 1rem;
+        width: 100px;
+        height: 100px;
         margin-bottom: 20px;
     }
     
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 180px;
+        margin: 5px 0;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .about-content {
+        padding: 0 5px;
+    }
+    
+    .about-content p {
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+    
     .skills-list {
-        gap: 8px;
+        gap: 6px;
+        padding: 0 5px;
     }
     
     .skill-tag {
-        padding: 8px 12px;
-        font-size: 0.85rem;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        min-width: 70px;
+        justify-content: center;
     }
     
     .skill-tag i {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .timeline-item {
-        padding-left: 50px;
-        margin-bottom: 30px;
+        padding-left: 45px;
+        margin-bottom: 25px;
     }
     
     .timeline-content h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    
+    .timeline-content .institution {
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content .duration {
+        font-size: 0.8rem;
     }
     
     .education-timeline::before {
-        left: 15px;
+        left: 12px;
     }
     
     .timeline-dot {
-        left: 6px;
-        width: 18px;
-        height: 18px;
+        left: 4px;
+        width: 16px;
+        height: 16px;
     }
     
     .project-card,
     .experience-card,
     .cert-card {
-        padding: 20px 15px;
+        padding: 15px 12px;
+        margin: 0 5px;
     }
     
     .project-header h3 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
     
     .project-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
     
     .project-features li {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        padding-left: 15px;
     }
     
     .project-link {
-        font-size: 0.9rem;
-        padding: 6px 12px;
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        margin: 2px;
     }
     
     .card-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .experience-card h3 {
+        font-size: 1rem;
+    }
+    
+    .experience-card .description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .cert-icon {
         width: 50px;
         height: 50px;
         font-size: 20px;
     }
     
-    .experience-card h3 {
-        font-size: 1.1rem;
-    }
-    
-    .cert-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-    }
-    
     .cert-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+    
+    .contact-content {
+        padding: 0 10px;
     }
     
     .contact-content p {
-        font-size: 1rem;
-        margin-bottom: 30px;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
     }
     
     .contact-link {
-        padding: 12px 20px;
-        font-size: 0.9rem;
-        width: 180px;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        width: 160px;
+        margin: 5px 0;
     }
     
     .contact-link i {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .back-to-top {
-        bottom: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        bottom: 12px;
+        right: 12px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    /* Blog and Admin responsive */
+    .blog-header h1 {
+        font-size: 2rem;
+    }
+    
+    .blog-post {
+        padding: 15px;
+        margin: 0 5px 20px;
+    }
+    
+    .post-title {
+        font-size: 1.3rem;
+    }
+    
+    .admin-main h1 {
+        font-size: 1.8rem;
+    }
+    
+    .post-form {
+        padding: 15px;
+        margin: 0 5px;
+    }
+    
+    .post-form input,
+    .post-form select,
+    .post-form textarea {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .publish-btn {
+        padding: 12px;
+        font-size: 0.9rem;
     }
 }
 

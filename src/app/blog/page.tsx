@@ -18,7 +18,7 @@ export default function BlogPage() {
         const uniquePosts = allPosts.filter((post, index, self) => 
           index === self.findIndex(p => p.id === post.id)
         )
-        setPosts(uniquePosts.sort((a, b) => new Date(b.date) - new Date(a.date)))
+        setPosts(uniquePosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()))
       })
       .catch(() => {
         setPosts(localPosts.length > 0 ? localPosts : [

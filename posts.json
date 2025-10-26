@@ -1,0 +1,34 @@
+[
+  {
+    "id": 4,
+    "title": "Add Your New Post Title Here",
+    "date": "January 20, 2025",
+    "excerpt": "Write your post summary here...",
+    "readTime": "3 min read",
+    "category": "Personal"
+  },
+  {
+    "id": 1,
+    "title": "My Journey into Computer Science",
+    "date": "January 15, 2025",
+    "excerpt": "Starting my CSE journey at SUST and discovering my passion for robotics and AI development.",
+    "readTime": "3 min read",
+    "category": "Personal"
+  },
+  {
+    "id": 2,
+    "title": "Building My First Game in C",
+    "date": "January 10, 2025", 
+    "excerpt": "Lessons learned while developing a Snake game using C and the raylib library.",
+    "readTime": "5 min read",
+    "category": "Programming"
+  },
+  {
+    "id": 3,
+    "title": "Robotics and Embedded Systems",
+    "date": "January 5, 2025",
+    "excerpt": "Exploring the world of embedded programming through my CodeCar project using Arduino.",
+    "readTime": "4 min read",
+    "category": "Robotics"
+  }
+]

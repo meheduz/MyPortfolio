@@ -697,9 +697,342 @@ section {
     transform: translateX(5px);
 }
 
+/* Login Page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--light-bg);
+}
+
+.login-container h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.login-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: var(--dark-blue);
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Admin Page */
+.admin-page {
+    min-height: 100vh;
+    background: var(--light-bg);
+}
+
+.admin-main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.admin-main h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.post-form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+}
+
+.post-form input,
+.post-form select,
+.post-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.post-form input:focus,
+.post-form select:focus,
+.post-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.post-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.publish-btn {
+    flex: 1;
+    padding: 15px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.publish-btn:hover {
+    background: var(--dark-blue);
+}
+
+.recent-posts {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.recent-posts h2 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-post {
+    background: var(--white);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.admin-post h3 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.admin-post p {
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.admin-post small {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.post-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn, .cancel-btn {
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.edit-btn {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.edit-btn:hover {
+    background: var(--dark-blue);
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Blog Page */
+.blog-page {
+    min-height: 100vh;
+    background: var(--light-bg);
+}
+
+.blog-main {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.blog-header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.blog-header p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.blog-posts {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.blog-post {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px var(--shadow);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border);
+}
+
+.blog-post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-category {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.post-date {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.post-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.post-excerpt {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.post-footer {
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.read-time {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.back-home {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: var(--dark-blue);
+}
+
 /* Certifications Section */
 .certifications {
-    background: var(--white);
+    background: var(--light-bg);
 }
 
 .cert-grid {
@@ -977,6 +1310,10 @@ section {
     
     .timeline-dot {
         left: 11px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
     }
     
     .cert-grid {

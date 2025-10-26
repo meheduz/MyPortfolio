@@ -1,0 +1,21 @@
+HOW TO POST ON YOUR BLOG - SUPER SIMPLE!
+
+1. Open "posts.json" file
+2. Change the first post details:
+   - Change "Add Your New Post Title Here" to your title
+   - Change date to today's date
+   - Change excerpt to your post summary
+   - Change category (Personal/Programming/Robotics/Tech)
+
+3. Save file
+4. Run: git add . && git commit -m "New post" && git push
+5. Done! Your post is live on Netlify!
+
+EXAMPLE:
+Change this:
+"title": "Add Your New Post Title Here"
+
+To this:
+"title": "My First Blog Post"
+
+That's it! Super simple posting.

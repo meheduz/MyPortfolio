@@ -62,13 +62,14 @@ export default function AdminPage() {
       localStorage.setItem('blogPosts', JSON.stringify(updatedPosts))
       
       // Submit to Netlify form for processing
-      const formData = new FormData()
-      formData.append('post-data', JSON.stringify(post))
+      const formParams = new URLSearchParams()
+      formParams.append('form-name', 'blog-posts')
+      formParams.append('post-data', JSON.stringify(post))
       
       await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        body: formParams.toString()
       })
       
       if (editingPost) {
